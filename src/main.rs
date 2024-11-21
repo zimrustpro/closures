@@ -17,4 +17,14 @@ fn main() {
     let number2 = 10;
     let example4 = || println!("{}", number1 + number2);
     example4();
+
+    (1..=3).for_each(|num| println!("{}", num));
+    (1..=3).for_each(|num| {
+        println!("Got a {}!", num);
+        if num % 2 == 0 {
+            println!("It's even");
+        } else {
+            println!("It's odd");
+        }
+    });
 }
