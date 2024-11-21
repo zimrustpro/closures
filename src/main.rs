@@ -57,4 +57,13 @@ fn main() {
         "The value at key 2 is {}",
         number_word_hashmap.get(&2).unwrap()
     );
+
+    let numbers_together = "140399923481800622623218009598281";
+    for (index, num) in numbers_together.char_indices() {
+        match (index % 3, num) {
+            (0 | 1, num) => print!("{num}"),
+            _ => print!("{}\t", num),
+        }
+    }
+    println!();
 }
