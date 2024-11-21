@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     let example1 = || println!("This is a closure");
     example1();
@@ -43,4 +45,16 @@ fn main() {
         .iter()
         .enumerate() // now each item is (usize, char) instead of just char
         .for_each(|(index, c)| println!("Index {} is: {}", index, c));
+
+    let some_keys = (0..=5).collect::<Vec<i32>>();
+    let some_values = vec!["zero", "one", "two", "three", "four", "five"];
+
+    let number_word_hashmap = some_keys
+        .into_iter()
+        .zip(some_values.into_iter())
+        .collect::<HashMap<_, _>>();
+    println!(
+        "The value at key 2 is {}",
+        number_word_hashmap.get(&2).unwrap()
+    );
 }
