@@ -37,4 +37,10 @@ fn main() {
         }
     });
     println!("{}", fourth);
+
+    let char_vec = vec!['z', 'y', 'x'];
+    char_vec
+        .iter()
+        .enumerate() // now each item is (usize, char) instead of just char
+        .for_each(|(index, c)| println!("Index {} is: {}", index, c));
 }
