@@ -27,4 +27,14 @@ fn main() {
             println!("It's odd");
         }
     });
+
+    let my_vec = vec![8, 9, 10];
+    let fourth = my_vec.get(3).unwrap_or_else(|| {
+        if let Some(val) = my_vec.get(2) {
+            val
+        } else {
+            &0
+        }
+    });
+    println!("{}", fourth);
 }
