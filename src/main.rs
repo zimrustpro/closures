@@ -5,4 +5,11 @@ fn main() {
     let example2 = |x: i32| println!("{}", x);
     example2(5);
     example2(5 + 5);
+
+    let example3 = || {
+        let num1 = 7;
+        let num2 = 10;
+        println!("The two numbers are {} and {}.", num1, num2);
+    };
+    example3();
 }
