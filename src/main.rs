@@ -12,4 +12,9 @@ fn main() {
         println!("The two numbers are {} and {}.", num1, num2);
     };
     example3();
+
+    let number1 = 6;
+    let number2 = 10;
+    let example4 = || println!("{}", number1 + number2);
+    example4();
 }
